@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: rgb(17, 42, 42);
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Results</h1>
+
+  {% if object_list %}
+    <ul>
+      {% for coffee in object_list %}
+      <li>Coffee Name: {{coffee.name}}
+        <br>
+        Description: {{coffee.description}}
+        <br>
+        Price : ₹.{{coffee.price}}
+        <br>
+        <br>
+        <img src="{{ coffee.image }}" alt="{{ coffee.name }} image" style="max-width: 500px; max-height: 500px;">
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No results found.</p>
+  {% endif %}
+    
+</body>
+</html>
+<!-- <h1>Search Results</h1>
+
+  {% if object_list %}
+    <ul>
+      {% for coffee in object_list %}
+      <li>Coffee Name: {{coffee.name}}
+        <br>
+        Description: {{coffee.description}}
+        <br>
+        Price : ₹.{{coffee.price}}
+        <br>
+        <br>
+        <img src="{{ coffee.image }}" alt="{{ coffee.name }} image" style="max-width: 500px; max-height: 500px;">
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No results found.</p>
+  {% endif %} -->

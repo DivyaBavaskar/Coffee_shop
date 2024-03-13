@@ -1,0 +1,20 @@
+<!-- search_results.html
+{% extends 'base_generic.html' %}
+
+{% block content %}
+  <h1>Search Results</h1>
+
+  {% if object_list %}
+    <ul>
+      {% for coffee in object_list %}
+        <li>
+          <strong>{{ coffee.name }}</strong><br>
+          Description: {{ coffee.description }}<br>
+          Image: <img src="{{ coffee.image.url }}" alt="{{ coffee.name }} image"><br>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No results found.</p>
+  {% endif %}
+{% endblock %} -->

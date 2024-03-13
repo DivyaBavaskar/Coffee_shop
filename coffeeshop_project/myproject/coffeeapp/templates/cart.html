@@ -1,0 +1,93 @@
+<!-- 
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CART</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        center {
+            margin-top: 20px;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        h2 {
+            color: #28a745;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        img {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+        }
+
+        p {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Cart</h1>
+        {% if order %}
+            <h2>ORDER ID : {{order.id}}</h2>
+            {% if items %}
+                <table border="1px">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Coffee</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in items %}
+                            <tr>
+                                <td><img src="{{ item.product.image.url }}" alt="No Image"></td>
+                                <td>{{ item.product.name }}</td>
+                                <td>{{ item.quantity }}</td>
+                                <td>{{ item.product.price }}</td>
+                                <td>{{ item.totalprice }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <p>No items in the cart</p>
+            {% endif %}
+        {% else %}
+            <p>No active order found</p>
+        {% endif %}
+    </center>
+</body>
+</html>
+ -->

@@ -1,0 +1,9 @@
+cd env
+test\scripts\activate
+cd coffeeshop_project
+cd myproject
+python manage.py runserver
+
+superuser  : Divyacoffeeshops
+password   : coffee1234
+
